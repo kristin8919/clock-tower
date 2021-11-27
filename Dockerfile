@@ -1,4 +1,5 @@
-FROM node:16
+ARG S6_ARCH
+FROM oznu/s6-node:16.13.0-${S6_ARCH:-amd64}
 
 # Create app directory
 WORKDIR /usr/src/app
